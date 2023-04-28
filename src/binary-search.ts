@@ -1,9 +1,19 @@
-export function binarySearch<T>(data: T[], needle: T): T | null {
-  for (const val of data) {
-    if (val == needle) {
-      return val
-    }
-  }
+export function binarySearch<T>(haystack: number[], needle: number): boolean {
+  let lo = 0
+  let hi = haystack.length
 
-  return null
+  do {
+    const m = Math.floor(lo + (hi - lo) / 2)
+    const v = haystack[m]
+
+    if (v === needle) {
+      return true
+    } else if (v > needle) {
+      hi = m
+    } else {
+      lo = m + 1
+    }
+  } while (lo < hi)
+
+  return false
 }

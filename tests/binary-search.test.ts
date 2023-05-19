@@ -1,5 +1,5 @@
 import { assertEquals } from '../deps.ts'
-import { binarySearch } from '../src/binary-search.ts'
+import binarySearch from '../src/binary-search.ts'
 
 Deno.test('search a small array', () => {
   const haystack = [2, 5, 10, 25, 80, 100, 200, 500, 1000]

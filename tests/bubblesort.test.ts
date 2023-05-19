@@ -1,5 +1,5 @@
 import { assertEquals } from '../deps.ts'
-import { bubblesort } from '../src/bubblesort.ts'
+import bubblesort from '../src/bubblesort.ts'
 
 Deno.test('search a small array', () => {
   const arr = [5, 8, 2, 3, 4, 9, 10]

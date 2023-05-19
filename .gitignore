@@ -24,3 +24,4 @@ config/*.json
 
 yarn-error.log
 tmp
+hidalgo

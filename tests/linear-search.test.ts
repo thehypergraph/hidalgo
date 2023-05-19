@@ -1,6 +1,6 @@
 import { assertEquals } from '../deps.ts'
 
-import { linearSearch } from '../src/linear-search.ts'
+import linearSearch from '../src/linear-search.ts'
 
 Deno.test('search for a string', () => {
   const stringData = ['a', 'b', 'c', 'd', 'e']

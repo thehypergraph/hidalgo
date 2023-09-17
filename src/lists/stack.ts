@@ -1,4 +1,4 @@
-class Stack<T> {
+export default class Stack<T> {
   public items = new Array<T>()
   public cap?: number
 
@@ -6,13 +6,13 @@ class Stack<T> {
     this.cap = cap
   }
 
-  push(item: T): void {
+  push(item: T): boolean {
     if (this.items.length === this.cap) {
-      console.error(`Stack capacity is full`)
-      return
+      return false
     }
 
     this.items.unshift(item)
+    return true
   }
 
   pop(): T | undefined {
@@ -47,5 +47,3 @@ class Stack<T> {
     }
   }
 }
-
-export default Stack
